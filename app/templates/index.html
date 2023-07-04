@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>J5H2</title>
+    </head>
+    <body>
+        <center>
+
+            <h1>Delicious Restaurant</h1>
+
+            <p>Place Your Order</p>
+
+
+            <table border="1" width="500px">
+                <tr>
+                    <td align="center">
+                        <button onclick="javascript:calculate_nugget(1)">ONE</button>
+                        <br>
+                        <button onclick="javascript:calculate_nugget(2)">TWO</button>
+                        <br>
+                        <button onclick="javascript:calculate_nugget(3)">THREE</button>
+                        <br>
+                        <button onclick="javascript:calculate_nugget(0)">Clear</button>
+                    </td>
+                    <td align="center">$8.50 - Nuggets</td>
+                    <td>
+                        <p id="nugget_quantity">quantity <br>0</p>
+                        
+                        <p id="nugget_Subtotal">Subtotal <br>0</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <button onclick="javascript:calculate_burger(1)">ONE</button>
+                        <br>
+                        <button onclick="javascript:calculate_burger(2)">TWO</button>
+                        <br>
+                        <button onclick="javascript:calculate_burger(3)">THREE</button>
+                        <br>
+                        <button onclick="javascript:calculate_burger(0)">Clear</button>
+                    </td>
+                    <td align="center">$6.00 - Burger</td>
+                    <td>
+                        <p id="burger_quantity">quantity <br>0</p>
+                 
+                        <p id="burger_Subtotal">Subtotal <br>0</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <button onclick="javascript:calculate_coke(1)">ONE</button>
+                        <br>
+                        <button onclick="javascript:calculate_coke(2)">TWO</button>
+                        <br>
+                        <button onclick="javascript:calculate_coke(3)">THREE</button>
+                        <br>
+                        <button onclick="javascript:calculate_coke(0)">Clear</button>
+                    </td>
+                    <td align="center">$2.0 - Coke</td>
+                    <td>
+                        <p id="coke_quantity">quantity <br>0</p>
+                        
+                        <p id="coke_Subtotal">Subtotal <br>0</p>
+                    </td>
+                </tr>
+            </table>
+        </center>
+
+        <script>
+            const  meal = {
+                Nugget: 8.5,
+                Burger: 6.00,
+                Coke: 2
+            };
+
+            function calculate_nugget(quantity) {
+
+                document.getElementById('nugget_quantity').innerHTML="quantity<br>"+quantity;
+                document.getElementById('nugget_Subtotal').innerHTML="Subtotal<br>"+quantity*meal.Nugget;          
+            }
+
+            function calculate_burger(quantity) {
+
+                document.getElementById('burger_quantity').innerHTML="quantity<br>"+quantity;
+                document.getElementById('burger_Subtotal').innerHTML="Subtotal<br>"+quantity*meal.Burger;          
+            }
+
+
+            function calculate_coke(quantity) {
+
+                document.getElementById('coke_quantity').innerHTML="quantity<br>"+quantity;
+                document.getElementById('coke_Subtotal').innerHTML="Subtotal<br>"+quantity*meal.Coke;          
+            }
+
+            
+
+
+        </script>
+
+
+    </body>
+</html>
